@@ -1,10 +1,18 @@
-import csv
+import random
+n = 3
+questions = '' 
+ans = 0 
 
-# 你的陣列
-data = [['Name', 'Age'], ['Alex', 21], ['Bob', 22], ['Clarke', 23]]
+for j in range(n):
+    print(n,j,"nj")
+    ran = random.randint(1,10)
+    #value.append(random.randint(1,10))
+    if j+1 != n :
+        questions += f"{ran} + "
+    else :
+        questions += f"{ran}"
+    
+    ans += ran 
 
-# 開啟檔案，並設定模式為 'a'，表示追加模式
-with open('data.csv', 'a', newline='') as f:
-    writer = csv.writer(f)
-    # 寫入陣列
-    writer.writerows(data)
+print(questions)
+print(ans)
